@@ -5,7 +5,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
 
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer blinky_dancer"></span>');
+  this.$node = $('<img class="dancer blinky_dancer" src=\'imgs/uglyMonkey.png\' height="150"></img>');
   this.setPosition();
 
 };

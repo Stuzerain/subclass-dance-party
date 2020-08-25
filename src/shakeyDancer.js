@@ -1,6 +1,6 @@
 var makeShakeyDancer = function(top, left, timeetweenSteps) {
   makeDancer.call(this, top, left, timeetweenSteps);
-  this.$node = $('<span class="dancer shakey_dancer"></span>');
+  this.$node = $('<img class="dancer shakey_dancer" src=\'imgs/shaker.png\' height="150"></img>');
   this.setPosition();
 };
 

@@ -34,9 +34,8 @@ $(document).ready(function() {
   $('.lineUpButton').on('click', function(event) {
     // some code
     var dancers = document.getElementsByClassName('dancer');
-    console.log(dancers);
     for (var i = 0; i < dancers.length; i++) {
-      $(dancers[i]).css({top: '50%', left: 100 + (50 * i)});
+      $(dancers[i]).css({top: '50%', left: 100 + (100 * i)});
     }
   });
 
