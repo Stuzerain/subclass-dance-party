@@ -106,6 +106,7 @@ describe('bouncyDancer', function() {
   });
 });
 
+
 // describe('shyDancer', function() {
 
 //   var shyDancer, clock;
