@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  window.dancers = [];
+  window.spaceEagles = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -28,6 +28,9 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    if (dancer.$node.hasClass('eagle_dancer') ) {
+      window.spaceEagles.push(dancer);
+    }
   });
 
 
@@ -38,6 +41,40 @@ $(document).ready(function() {
       $(dancers[i]).css({top: '50%', left: 100 + (100 * i)});
     }
   });
+
+  $('body').on('click', '.eagle_dancer', function() {
+    spaceEagles[0].moving = !spaceEagles[0].moving;
+
+
+    // TODO - mouse follow
+    // set up boolean--clicking once causes eagle to follow, clicking again sets boolean to false and it stops following
+    // select eagle in variable to work with
+    console.log(spaceEagles[0]);
+    if (spaceEagles[0].moving === true) {
+      $('body').bind('mousemove', function(e) {
+        $('.eagle_dancer').css({
+          top: event.pageY - 100,
+          left: event.pageX - 100
+        });
+      });
+    }
+
+    if (spaceEagles[0].moving === false) {
+      $('body').off('mousemove');
+      // $('.eagle_dancer').css({
+      //   top: event.pageY - 500,
+      //   left: event.pageX - 500
+      // });
+    }
+  });
+
+
+
+  $('body').on('click', function(event) {
+    console.log('event.pageX: ', event.pageX);
+    console.log('event.pageY: ', event.pageY);
+  });
+
 
 });
 

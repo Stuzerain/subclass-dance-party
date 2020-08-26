@@ -49,10 +49,9 @@ describe('shakeyDancer', function() {
     expect(shakeyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node shake left to right', function() {
-    sinon.spy(shakeyDancer.$node, 'animate');
-    shakeyDancer.step();
-    expect(shakeyDancer.$node.animate.called).to.be.true;
+  it('should have a shake animation as a CSS property', function() {
+
+    expect($('.shakey_dancer').css('animation', 'shake') !== null).to.be.true;
   });
 
   describe('dance', function() {
@@ -86,10 +85,8 @@ describe('bouncyDancer', function() {
     expect(bouncyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node bounce up and down', function() {
-    sinon.spy(bouncyDancer.$node, 'animate');
-    bouncyDancer.step();
-    expect(bouncyDancer.$node.animate.called).to.be.true;
+  it('should have a bounce animation as a CSS property', function() {
+    expect($('bouncy_dancer').css('animation', 'bounce') !== null).to.be.true;
   });
 
   describe('dance', function() {

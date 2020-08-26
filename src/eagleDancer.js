@@ -1,6 +1,8 @@
 var makeEagleDancer = function(top, left, timeBetweenSteps) {
   makeBouncyDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $(/*todo*/);
+  this.$node = $('<img class="dancer bouncy_dancer eagle_dancer" src=\'imgs/spaceEagle.png\' height="150"></img>');
+  this.moving = false;
+  this.setPosition();
 };
 
 makeEagleDancer.prototype = Object.create(makeBouncyDancer.prototype);
