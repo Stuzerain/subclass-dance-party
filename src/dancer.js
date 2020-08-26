@@ -26,6 +26,5 @@ makeDancer.prototype.setPosition = function () {
     left: this.left
   };
   this.$node.css(styleSettings);
-  console.log(this);
 };
 

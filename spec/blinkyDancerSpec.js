@@ -105,3 +105,39 @@ describe('bouncyDancer', function() {
     });
   });
 });
+
+// describe('shyDancer', function() {
+
+//   var shyDancer, clock;
+//   var timeBetweenSteps = 100;
+
+//   beforeEach(function() {
+//     clock = sinon.useFakeTimers();
+//     shyDancer = new makeShyDancer(10, 20, timeBetweenSteps);
+//   });
+
+//   it('should have a jQuery $node object', function() {
+//     expect(shyDancer.$node).to.be.an.instanceof(jQuery);
+//   });
+
+//   it('should have toggle off when it is hovered over', function() {
+//     sinon.spy(shyDancer.$node, 'toggle');
+//     expect(shyDancer.$node.toggle.called).to.be.true;
+//   });
+
+//   describe('dance', function() {
+
+//     it('should call step at least once per second', function() {
+//       var shyDancer = new makeShyDancer(10, 20, timeBetweenSteps);
+//       sinon.spy(shyDancer, 'step');
+//       expect(shyDancer.step.callCount).to.be.equal(0);
+//       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+//       clock.tick(timeBetweenSteps);
+
+//       expect(shyDancer.step.callCount).to.be.equal(1);
+
+//       clock.tick(timeBetweenSteps);
+//       expect(shyDancer.step.callCount).to.be.equal(2);
+//     });
+//   });
+// });

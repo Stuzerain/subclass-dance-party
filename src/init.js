@@ -45,36 +45,24 @@ $(document).ready(function() {
   $('body').on('click', '.eagle_dancer', function() {
     spaceEagles[0].moving = !spaceEagles[0].moving;
 
-
     // TODO - mouse follow
     // set up boolean--clicking once causes eagle to follow, clicking again sets boolean to false and it stops following
     // select eagle in variable to work with
-    console.log(spaceEagles[0]);
     if (spaceEagles[0].moving === true) {
-      $('body').bind('mousemove', function(e) {
+      $('body').bind('mousemove', function(event) {
         $('.eagle_dancer').css({
           top: event.pageY - 100,
           left: event.pageX - 100
         });
       });
+
     }
 
     if (spaceEagles[0].moving === false) {
       $('body').off('mousemove');
-      // $('.eagle_dancer').css({
-      //   top: event.pageY - 500,
-      //   left: event.pageX - 500
-      // });
+      $('body').off('mouseover');
     }
   });
-
-
-
-  $('body').on('click', function(event) {
-    console.log('event.pageX: ', event.pageX);
-    console.log('event.pageY: ', event.pageY);
-  });
-
 
 });
 

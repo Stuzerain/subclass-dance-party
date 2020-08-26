@@ -131,6 +131,10 @@ body, a:link, a:visited, a:active{
   }
 }
 
+.shy_dancer:hover {
+  display: none;
+}
+
 /* .bouncy_dancer {
   border:10px solid orange;
 } */
